@@ -1,0 +1,6 @@
+{
+  "name": "ESCROW AGENT",
+  "description": "AI-powered freelance escrow platform with PayPal authorization holds, Gemini deliverable inspection, and automated milestone verification.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

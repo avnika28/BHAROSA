@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-ivory: #FAF8F3;
+    --bg-black: #08090B;
+    --accent-lime: #CDF22B;
+    --signal-yellow: #FFC900;
+    --signal-coral: #FF6845;
+    --text-grey: #8A8780;
+    --accent-saffron: #FF9933;
+  }
+
+  body {
+    font-family: 'DM Sans', 'Hind', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #FAF8F3;
+    color: #08090B;
+    overflow-x: hidden;
+  }
+}
+
+/* Studio Headlines: Bricolage Grotesque 800 (-0.02em) or Yatra One for Hindi */
+.font-display {
+  font-family: 'Bricolage Grotesque', 'Yatra One', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.lang-hi .font-display {
+  font-family: 'Yatra One', 'Bricolage Grotesque', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Body & Labels: DM Sans / Hind */
+.font-body {
+  font-family: 'DM Sans', 'Hind', sans-serif;
+}
+
+.lang-hi .font-body {
+  font-family: 'Hind', 'DM Sans', sans-serif;
+}
+
+/* Small Labels & Nav Links: sentence case, 14px, normal letter-spacing, weight 500 */
+.studio-label {
+  font-family: 'DM Sans', 'Hind', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: normal;
+  text-transform: none;
+}
+
+/* Handwritten notes & stickers: Kalam */
+.font-hand {
+  font-family: 'Kalam', cursive;
+}
+
+/* Monospace ONLY for money amounts and IDs */
+.font-money-id {
+  font-family: 'JetBrains Mono', monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Tactile Studio Buttons: radius 12px, 2px black border, hard offset shadow 4px 4px 0 #08090B */
+.studio-btn {
+  border-radius: 12px;
+  border: 2px solid #08090B;
+  box-shadow: 4px 4px 0 #08090B;
+  transition: transform 120ms ease, box-shadow 120ms ease, background-color 120ms ease;
+}
+
+.studio-btn:hover:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #08090B;
+}
+
+.studio-btn:active:not(:disabled) {
+  transform: translate(4px, 4px);
+  box-shadow: 0 0 0 #08090B;
+}
+
+.studio-btn-primary {
+  background-color: #CDF22B;
+  color: #08090B;
+}
+
+.studio-btn-primary:disabled {
+  background-color: rgba(205, 242, 43, 0.4);
+  color: #08090B;
+  cursor: not-allowed;
+}
+
+.studio-btn-secondary {
+  background-color: #FAF8F3;
+  color: #08090B;
+}
+
+.studio-btn-secondary:disabled {
+  background-color: rgba(205, 242, 43, 0.4);
+  color: #08090B;
+  cursor: not-allowed;
+}
+
+/* Inputs: soft 2px black border, radius 10px */
+.studio-input {
+  border-radius: 10px;
+  border: 2px solid #08090B;
+  background-color: #FAF8F3;
+  color: #08090B;
+  font-family: 'DM Sans', 'Hind', sans-serif;
+  transition: box-shadow 120ms ease, border-color 120ms ease;
+}
+
+.studio-input:focus {
+  outline: none;
+  box-shadow: 3px 3px 0 #CDF22B;
+}
+
+/* Cards: subtle 1deg tilt on hover */
+.studio-card-tilt {
+  transition: transform 180ms ease;
+}
+
+.studio-card-tilt:hover {
+  transform: rotate(-1deg);
+}
+
+/* Page fade-up 8px on load */
+@keyframes pageFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-page-fade {
+  animation: pageFadeUp 260ms ease-out forwards;
+}
